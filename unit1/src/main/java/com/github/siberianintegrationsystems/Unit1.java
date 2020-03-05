@@ -16,18 +16,11 @@ public class Unit1 {
      * При реализации метода нельзя использовать метод reverse() из класса StringBuilder
      */
     private static String revertString() {
-        int wordCount=INPUT_STRING.length();
-        char[]charArray=INPUT_STRING.toCharArray();
-        char[]reverseArray=new char[wordCount];
-        for(int i=0;i<wordCount;i++){
-            reverseArray[i]=charArray[wordCount-1-i];
-        }
-        String reverse="";
-        for(int i=0;i<reverseArray.length;i++){
-            reverse+=reverseArray[i];
-        }
-        System.out.println(reverse);
-        return reverse;
+        StringBuilder reverse = new StringBuilder();
+        char[] charArray = INPUT_STRING.toCharArray();
+        for(int i = 0; i < INPUT_STRING.length(); i++){
+            reverse.append(charArray[INPUT_STRING.length()-1-i]);
+        }return reverse.toString();
     }
 
     private static void checkResult(String result) {
