@@ -18,8 +18,8 @@ public class Unit1 {
     private static String revertString() {
         StringBuilder reverse = new StringBuilder();
         char[] charArray = INPUT_STRING.toCharArray();
-        for(int i = 0; i < charArray.length; i++){
-            reverse.append(charArray[charArray.length - 1 - i]);
+        for(int i = 0; i < INPUT_STRING.length(); i++){
+            reverse.append(charArray[INPUT_STRING.length() - 1 - i]);
         }return reverse.toString();
     }
 
